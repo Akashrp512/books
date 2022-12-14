@@ -1,7 +1,7 @@
-import React,{useState} from 'react';
+import {useState} from 'react';
 import BookEdit from './BookEdit'
 
-const BookShow = ({book, onDelete, onEdit}) => {
+function BookShow ({book, onDelete, onEdit}){
 
 const [showEdit, setShowEdit] = useState(false);
 

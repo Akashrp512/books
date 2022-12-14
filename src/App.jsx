@@ -25,10 +25,10 @@ const updatedBook = books.filter((book) =>{
 }
 
   const createBook =(title) =>{
-    const updatedBook = [
-      ...books, {id: Math.round(Math.random()*999), title }
+    const updatedBooks = [
+      ...books, {id: Math.round(Math.random()*999), title, }
     ];
-    setBooks(updatedBook);
+    setBooks(updatedBooks);
   }
 
   return (
@@ -38,7 +38,7 @@ const updatedBook = books.filter((book) =>{
      <BookList books={books} onDelete={deleteBookById} onEdit={editBookById}/>
      <BookCreate onCreate={createBook} />
     </div>
-  )
+  );
 }
 
 export default App
