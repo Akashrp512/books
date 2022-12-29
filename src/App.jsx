@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react'
 
 import './App.css'
@@ -24,9 +25,13 @@ const updatedBook = books.filter((book) =>{
   setBooks(updatedBook);
 }
 
-  const createBook =(title) =>{
+  const createBook =async (title) =>{
+  const response = await axios.post('http://localhost:3001/books',{
+        title,
+    });
+    
     const updatedBooks = [
-      ...books, {id: Math.round(Math.random()*999), title, }
+      ...books, response.data
     ];
     setBooks(updatedBooks);
   }
