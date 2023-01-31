@@ -10,12 +10,9 @@ function Provider ({children}) {
             count,
             incrementCount:() =>{
                 setCount(count+1);
-            }
-        }
-        return
-            <BooksContext.Provider value={valueToShare} >
-                {children}
-            </BooksContext.Provider>
+            },
+        };
+
 }
 
 export { Provider}
